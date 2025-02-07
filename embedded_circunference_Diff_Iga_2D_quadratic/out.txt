@@ -1,0 +1,1303 @@
+ |  /           |                  
+ ' /   __| _` | __|  _ \   __|    
+ . \  |   (   | |   (   |\__ \  
+_|\_\_|  \__,_|\__|\___/ ____/
+           Multi-Physics 9.5."0"-convdiff/embedded_extended_gradient_method-96c23b7850-Release-x86_64
+           Compiled for GNU/Linux and Python3.10 with GCC-11.4
+Compiled with threading support.
+Maximum number of threads: 32.
+Importing    KratosIgaApplication 
+    KRATOS  _____ _____
+           |_   _/ ____|   /\
+             | || |  __   /  \
+             | || | |_ | / /\ \
+            _| || |__| |/ ____ \
+           |_____\_____/_/    \_\
+Initializing KratosIgaApplication...
+Importing    KratosConvectionDiffusionApplication 
+ KRATOS ___ ___  _  ___   __   ___ ___ ___ ___ 
+       / __/ _ || || | | / /__|   |_ _| __| __|
+      | (_| (_) | .` || V /___| |) | || _|| _| 
+       |___|___/|_||_| |_/    |___/___|_| |_|  APPLICATION
+::[ConvectionDiffusionSolver]:: : Construction finished 
+ConvectionDiffusionStationarySolver: Construction finished 
+::[ConvectionDiffusionSolver]:: : Variables ADDED 
+[WARNING] DEPRECATION-Warning; KratosModelerFactory: please use "KratosModelParametersFactory" instead. 
+::[CadIoModeler]::: Importing Cad Model from: background_geometry.cad.json
+ReadBreps: Reading Brep "1" - faces.
+ReadBreps: Reading Brep "1" - edges.
+ReadBreps: Reading Brep "1" - points.
+SingleImportModelPart: Reading model part from file: "/localdata/Extended Gradient Method Kratos/embedded_circunference_Diff_Iga_2D_quadratic/circunference_Conv_Diff".mdpa
+ModelPartIO:   [Reading Nodes    : 307 nodes read]
+ModelPartIO:   [Reading Elements : 524 elements read] [Type: LaplacianElement2D3N]
+ModelPartIO:   [Reading Conditions : 88 conditions read] [Type: LineCondition2D2N]
+ModelPartIO:   [Total Lines Read : 1956]
+SingleImportModelPart: Finished reading model part from mdpa file.
+CreateQuadraturePointGeometries: Creating LaplacianIGAElements of type: element for 1 geometries in IgaBackgroundMeshModelPart-SubModelPart.
+CreateQuadraturePointGeometries: Creating SupportLaplacianConditions of type: condition for 4 geometries in ExternalSupportNitsche-SubModelPart.
+::[PythonSolver]::: Reading model part. 
+::[PythonSolver]::: Using already imported model part - no reading necessary. 
+ModelPart: -IgaBackgroundMeshModelPart- model part
+    Buffer Size : 1
+    Number of tables : 0
+    Number of sub model parts : 2
+    Current solution step index : 0
+    DOMAIN_SIZE : 2
+    CONVECTION_DIFFUSION_SETTINGS : 0x5fa2a3835280
+
+    Number of Geometries  : 5
+    Mesh 0 :
+        Number of Nodes       : 100
+        Number of Properties  : 0
+        Number of Elements    : 576
+        Number of Conditions  : 160
+        Number of Constraints : 0
+
+    -ExternalSupportNitsche- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 84
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 160
+            Number of Constraints : 0
+    -IgaBackgroundMeshModelPart- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 100
+            Number of Properties  : 0
+            Number of Elements    : 576
+            Number of Conditions  : 0
+            Number of Constraints : 0
+ 
+::[PythonSolver]:: : Finished reading model part. 
+Read materials: Started
+[WARNING] ReadMaterialsUtility: Materials for SubModelPart "IgaBackgroundMeshModelPart.ExternalSupportNitsche" is overriding Parent-ModelPart "IgaBackgroundMeshModelPart"!
+[WARNING] ReadMaterialsUtility: WARNING:: The properties ID: 1 is already defined in model part IgaBackgroundMeshModelPart.ExternalSupportNitsche. This will overwrite the existing values
+Read materials: No constitutive law defined for material ID: 1
+[WARNING] ReadMaterialsUtility: WARNING:: The properties ID: 1 already has variables.
+Read materials: No constitutive law defined for material ID: 1
+Read materials: Finished
+::[ConvectionDiffusionSolver]:: : Materials were successfully imported. 
+::[ConvectionDiffusionSolver]::: ModelPart prepared for Solver. 
+::[ConvectionDiffusionSolver]:: : DOF's ADDED 
+ReadParamatersFile: Reading file: "physics.iga.json"
+::[ConvectionDiffusionSolver]:: : Initializing ... 
+Linear-Solver-Factory: Constructing a regular (non-complex) linear-solver 
+::[ConvectionDiffusionSolver]:: : Finished initialization. 
+knot_vector_u : [0, 0.125, 0.25, 0.375, 0.5, 0.625, 0.75, 0.875, 1]
+Starting intersected elements classification
+Finishing intersected elements classification
+Starting inside elements classification
+Finishing inside elements classification
+Deprecated method called in "/localdata/python_venv/kratos/lib/python3.10/site-packages/KratosMultiphysics/analysis_stage.py" in line 322: Iterating through "Parameters" object is deprecated, please use the "values" method instead
+::[Extended Gradient Method Poisson Problem IGA Simulation]:: : Analysis -START-  
+::[Extended Gradient Method Poisson Problem IGA Simulation]:: : STEP:  1 
+::[Extended Gradient Method Poisson Problem IGA Simulation]:: : TIME:  1.0 
+p_gauss_point_geometry->Center() : Point (0.264088, 0.264088, 0)
+exact_solution_gradient[0] : 1.43194
+exact_solution_gradient[1] : -1.70965
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.3125, 0)
+exact_solution_gradient[0] : 1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.360912, 0)
+exact_solution_gradient[0] : 0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.264088, 0)
+exact_solution_gradient[0] : 1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.3125, 0)
+exact_solution_gradient[0] : 0.969679
+exact_solution_gradient[1] : -2.17191
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.360912, 0)
+exact_solution_gradient[0] : 0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.264088, 0)
+exact_solution_gradient[0] : 0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.3125, 0)
+exact_solution_gradient[0] : 0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.360912, 0)
+exact_solution_gradient[0] : 0.562612
+exact_solution_gradient[1] : -2.57898
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.389088, 0)
+exact_solution_gradient[0] : 0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.4375, 0)
+exact_solution_gradient[0] : 0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.485912, 0)
+exact_solution_gradient[0] : 0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.389088, 0)
+exact_solution_gradient[0] : 0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.4375, 0)
+exact_solution_gradient[0] : 0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.485912, 0)
+exact_solution_gradient[0] : 0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.389088, 0)
+exact_solution_gradient[0] : 0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.4375, 0)
+exact_solution_gradient[0] : 0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.485912, 0)
+exact_solution_gradient[0] : 0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.514088, 0)
+exact_solution_gradient[0] : -0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.5625, 0)
+exact_solution_gradient[0] : -0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.610912, 0)
+exact_solution_gradient[0] : -0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.514088, 0)
+exact_solution_gradient[0] : -0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.5625, 0)
+exact_solution_gradient[0] : -0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.610912, 0)
+exact_solution_gradient[0] : -0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.514088, 0)
+exact_solution_gradient[0] : -0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.5625, 0)
+exact_solution_gradient[0] : -0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.610912, 0)
+exact_solution_gradient[0] : -0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.639088, 0)
+exact_solution_gradient[0] : -0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.6875, 0)
+exact_solution_gradient[0] : -1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.264088, 0.735912, 0)
+exact_solution_gradient[0] : -1.43194
+exact_solution_gradient[1] : -1.70965
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.639088, 0)
+exact_solution_gradient[0] : -0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.6875, 0)
+exact_solution_gradient[0] : -0.969679
+exact_solution_gradient[1] : -2.17191
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.3125, 0.735912, 0)
+exact_solution_gradient[0] : -1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.639088, 0)
+exact_solution_gradient[0] : -0.562612
+exact_solution_gradient[1] : -2.57898
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.6875, 0)
+exact_solution_gradient[0] : -0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.360912, 0.735912, 0)
+exact_solution_gradient[0] : -0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.389088, 0.264088, 0)
+exact_solution_gradient[0] : 0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.389088, 0.3125, 0)
+exact_solution_gradient[0] : 0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.389088, 0.360912, 0)
+exact_solution_gradient[0] : 0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.4375, 0.264088, 0)
+exact_solution_gradient[0] : 0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.4375, 0.3125, 0)
+exact_solution_gradient[0] : 0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.4375, 0.360912, 0)
+exact_solution_gradient[0] : 0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.485912, 0.264088, 0)
+exact_solution_gradient[0] : 0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.485912, 0.3125, 0)
+exact_solution_gradient[0] : 0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.485912, 0.360912, 0)
+exact_solution_gradient[0] : 0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.389088, 0.639088, 0)
+exact_solution_gradient[0] : -0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.389088, 0.6875, 0)
+exact_solution_gradient[0] : -0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.389088, 0.735912, 0)
+exact_solution_gradient[0] : -0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.4375, 0.639088, 0)
+exact_solution_gradient[0] : -0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.4375, 0.6875, 0)
+exact_solution_gradient[0] : -0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.4375, 0.735912, 0)
+exact_solution_gradient[0] : -0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.485912, 0.639088, 0)
+exact_solution_gradient[0] : -0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.485912, 0.6875, 0)
+exact_solution_gradient[0] : -0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.485912, 0.735912, 0)
+exact_solution_gradient[0] : -0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.514088, 0.264088, 0)
+exact_solution_gradient[0] : -0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.514088, 0.3125, 0)
+exact_solution_gradient[0] : -0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.514088, 0.360912, 0)
+exact_solution_gradient[0] : -0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.5625, 0.264088, 0)
+exact_solution_gradient[0] : -0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.5625, 0.3125, 0)
+exact_solution_gradient[0] : -0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.5625, 0.360912, 0)
+exact_solution_gradient[0] : -0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.610912, 0.264088, 0)
+exact_solution_gradient[0] : -0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.610912, 0.3125, 0)
+exact_solution_gradient[0] : -0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.610912, 0.360912, 0)
+exact_solution_gradient[0] : -0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.514088, 0.639088, 0)
+exact_solution_gradient[0] : 0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.514088, 0.6875, 0)
+exact_solution_gradient[0] : 0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.514088, 0.735912, 0)
+exact_solution_gradient[0] : 0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.5625, 0.639088, 0)
+exact_solution_gradient[0] : 0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.5625, 0.6875, 0)
+exact_solution_gradient[0] : 0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.5625, 0.735912, 0)
+exact_solution_gradient[0] : 0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.610912, 0.639088, 0)
+exact_solution_gradient[0] : 0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.610912, 0.6875, 0)
+exact_solution_gradient[0] : 0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.610912, 0.735912, 0)
+exact_solution_gradient[0] : 0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.264088, 0)
+exact_solution_gradient[0] : -0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.3125, 0)
+exact_solution_gradient[0] : -0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.360912, 0)
+exact_solution_gradient[0] : -0.562612
+exact_solution_gradient[1] : -2.57898
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.264088, 0)
+exact_solution_gradient[0] : -1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.3125, 0)
+exact_solution_gradient[0] : -0.969679
+exact_solution_gradient[1] : -2.17191
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.360912, 0)
+exact_solution_gradient[0] : -0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.264088, 0)
+exact_solution_gradient[0] : -1.43194
+exact_solution_gradient[1] : -1.70965
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.3125, 0)
+exact_solution_gradient[0] : -1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.360912, 0)
+exact_solution_gradient[0] : -0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.389088, 0)
+exact_solution_gradient[0] : -0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.4375, 0)
+exact_solution_gradient[0] : -0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.485912, 0)
+exact_solution_gradient[0] : -0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.389088, 0)
+exact_solution_gradient[0] : -0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.4375, 0)
+exact_solution_gradient[0] : -0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.485912, 0)
+exact_solution_gradient[0] : -0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.389088, 0)
+exact_solution_gradient[0] : -0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.4375, 0)
+exact_solution_gradient[0] : -0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.485912, 0)
+exact_solution_gradient[0] : -0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.514088, 0)
+exact_solution_gradient[0] : 0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.5625, 0)
+exact_solution_gradient[0] : 0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.610912, 0)
+exact_solution_gradient[0] : 0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.514088, 0)
+exact_solution_gradient[0] : 0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.5625, 0)
+exact_solution_gradient[0] : 0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.610912, 0)
+exact_solution_gradient[0] : 0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.514088, 0)
+exact_solution_gradient[0] : 0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.5625, 0)
+exact_solution_gradient[0] : 0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.610912, 0)
+exact_solution_gradient[0] : 0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.639088, 0)
+exact_solution_gradient[0] : 0.562612
+exact_solution_gradient[1] : -2.57898
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.6875, 0)
+exact_solution_gradient[0] : 0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.639088, 0.735912, 0)
+exact_solution_gradient[0] : 0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.639088, 0)
+exact_solution_gradient[0] : 0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.6875, 0)
+exact_solution_gradient[0] : 0.969679
+exact_solution_gradient[1] : -2.17191
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.6875, 0.735912, 0)
+exact_solution_gradient[0] : 1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.639088, 0)
+exact_solution_gradient[0] : 0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.6875, 0)
+exact_solution_gradient[0] : 1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+p_gauss_point_geometry->Center() : Point (0.735912, 0.735912, 0)
+exact_solution_gradient[0] : 1.43194
+exact_solution_gradient[1] : -1.70965
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+::[Extended Gradient Method Poisson Problem IGA Simulation]:: : STEP:  1 
+::[Extended Gradient Method Poisson Problem IGA Simulation]:: : TIME:  1.0 
+quadrature_point_position : [3](0.264088,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.264088, 0)
+exact_solution_gradient[0] : 1.43194
+exact_solution_gradient[1] : -1.70965
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.3125, 0)
+exact_solution_gradient[0] : 1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.360912, 0)
+exact_solution_gradient[0] : 0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.264088, 0)
+exact_solution_gradient[0] : 1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.3125, 0)
+exact_solution_gradient[0] : 0.969679
+exact_solution_gradient[1] : -2.17191
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.360912, 0)
+exact_solution_gradient[0] : 0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.264088, 0)
+exact_solution_gradient[0] : 0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.3125, 0)
+exact_solution_gradient[0] : 0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.360912, 0)
+exact_solution_gradient[0] : 0.562612
+exact_solution_gradient[1] : -2.57898
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.389088,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.389088, 0)
+exact_solution_gradient[0] : 0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.4375,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.4375, 0)
+exact_solution_gradient[0] : 0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.485912,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.485912, 0)
+exact_solution_gradient[0] : 0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.389088,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.389088, 0)
+exact_solution_gradient[0] : 0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.4375,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.4375, 0)
+exact_solution_gradient[0] : 0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.485912,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.485912, 0)
+exact_solution_gradient[0] : 0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.389088,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.389088, 0)
+exact_solution_gradient[0] : 0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.4375,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.4375, 0)
+exact_solution_gradient[0] : 0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.485912,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.485912, 0)
+exact_solution_gradient[0] : 0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.514088,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.514088, 0)
+exact_solution_gradient[0] : -0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.5625,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.5625, 0)
+exact_solution_gradient[0] : -0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.610912,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.610912, 0)
+exact_solution_gradient[0] : -0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.514088,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.514088, 0)
+exact_solution_gradient[0] : -0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.5625,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.5625, 0)
+exact_solution_gradient[0] : -0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.610912,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.610912, 0)
+exact_solution_gradient[0] : -0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.514088,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.514088, 0)
+exact_solution_gradient[0] : -0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.5625,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.5625, 0)
+exact_solution_gradient[0] : -0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.610912,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.610912, 0)
+exact_solution_gradient[0] : -0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.639088, 0)
+exact_solution_gradient[0] : -0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.6875, 0)
+exact_solution_gradient[0] : -1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.264088,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.264088, 0.735912, 0)
+exact_solution_gradient[0] : -1.43194
+exact_solution_gradient[1] : -1.70965
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.639088, 0)
+exact_solution_gradient[0] : -0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.6875, 0)
+exact_solution_gradient[0] : -0.969679
+exact_solution_gradient[1] : -2.17191
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.3125,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.3125, 0.735912, 0)
+exact_solution_gradient[0] : -1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.639088, 0)
+exact_solution_gradient[0] : -0.562612
+exact_solution_gradient[1] : -2.57898
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.6875, 0)
+exact_solution_gradient[0] : -0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.360912,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.360912, 0.735912, 0)
+exact_solution_gradient[0] : -0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.389088,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.389088, 0.264088, 0)
+exact_solution_gradient[0] : 0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.389088,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.389088, 0.3125, 0)
+exact_solution_gradient[0] : 0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.389088,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.389088, 0.360912, 0)
+exact_solution_gradient[0] : 0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.4375,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.4375, 0.264088, 0)
+exact_solution_gradient[0] : 0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.4375,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.4375, 0.3125, 0)
+exact_solution_gradient[0] : 0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.4375,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.4375, 0.360912, 0)
+exact_solution_gradient[0] : 0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.485912,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.485912, 0.264088, 0)
+exact_solution_gradient[0] : 0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.485912,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.485912, 0.3125, 0)
+exact_solution_gradient[0] : 0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.485912,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.485912, 0.360912, 0)
+exact_solution_gradient[0] : 0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.389088,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.389088, 0.639088, 0)
+exact_solution_gradient[0] : -0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.389088,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.389088, 0.6875, 0)
+exact_solution_gradient[0] : -0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.389088,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.389088, 0.735912, 0)
+exact_solution_gradient[0] : -0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.4375,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.4375, 0.639088, 0)
+exact_solution_gradient[0] : -0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.4375,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.4375, 0.6875, 0)
+exact_solution_gradient[0] : -0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.4375,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.4375, 0.735912, 0)
+exact_solution_gradient[0] : -0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.485912,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.485912, 0.639088, 0)
+exact_solution_gradient[0] : -0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.485912,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.485912, 0.6875, 0)
+exact_solution_gradient[0] : -0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.485912,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.485912, 0.735912, 0)
+exact_solution_gradient[0] : -0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.514088,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.514088, 0.264088, 0)
+exact_solution_gradient[0] : -0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.514088,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.514088, 0.3125, 0)
+exact_solution_gradient[0] : -0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.514088,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.514088, 0.360912, 0)
+exact_solution_gradient[0] : -0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.5625,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.5625, 0.264088, 0)
+exact_solution_gradient[0] : -0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.5625,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.5625, 0.3125, 0)
+exact_solution_gradient[0] : -0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.5625,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.5625, 0.360912, 0)
+exact_solution_gradient[0] : -0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.610912,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.610912, 0.264088, 0)
+exact_solution_gradient[0] : -0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.610912,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.610912, 0.3125, 0)
+exact_solution_gradient[0] : -0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.610912,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.610912, 0.360912, 0)
+exact_solution_gradient[0] : -0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.514088,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.514088, 0.639088, 0)
+exact_solution_gradient[0] : 0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.514088,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.514088, 0.6875, 0)
+exact_solution_gradient[0] : 0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.514088,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.514088, 0.735912, 0)
+exact_solution_gradient[0] : 0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.5625,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.5625, 0.639088, 0)
+exact_solution_gradient[0] : 0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.5625,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.5625, 0.6875, 0)
+exact_solution_gradient[0] : 0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.5625,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.5625, 0.735912, 0)
+exact_solution_gradient[0] : 0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.610912,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.610912, 0.639088, 0)
+exact_solution_gradient[0] : 0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.610912,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.610912, 0.6875, 0)
+exact_solution_gradient[0] : 0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.610912,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.610912, 0.735912, 0)
+exact_solution_gradient[0] : 0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.264088, 0)
+exact_solution_gradient[0] : -0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.3125, 0)
+exact_solution_gradient[0] : -0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.360912, 0)
+exact_solution_gradient[0] : -0.562612
+exact_solution_gradient[1] : -2.57898
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.264088, 0)
+exact_solution_gradient[0] : -1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.3125, 0)
+exact_solution_gradient[0] : -0.969679
+exact_solution_gradient[1] : -2.17191
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.360912, 0)
+exact_solution_gradient[0] : -0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.264088,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.264088, 0)
+exact_solution_gradient[0] : -1.43194
+exact_solution_gradient[1] : -1.70965
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.3125,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.3125, 0)
+exact_solution_gradient[0] : -1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.360912,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.360912, 0)
+exact_solution_gradient[0] : -0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.389088,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.389088, 0)
+exact_solution_gradient[0] : -0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.4375,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.4375, 0)
+exact_solution_gradient[0] : -0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.485912,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.485912, 0)
+exact_solution_gradient[0] : -0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.389088,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.389088, 0)
+exact_solution_gradient[0] : -0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.4375,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.4375, 0)
+exact_solution_gradient[0] : -0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.485912,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.485912, 0)
+exact_solution_gradient[0] : -0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.389088,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.389088, 0)
+exact_solution_gradient[0] : -0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.4375,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.4375, 0)
+exact_solution_gradient[0] : -0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.485912,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.485912, 0)
+exact_solution_gradient[0] : -0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.514088,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.514088, 0)
+exact_solution_gradient[0] : 0.0588204
+exact_solution_gradient[1] : -2.84363
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.5625,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.5625, 0)
+exact_solution_gradient[0] : 0.259367
+exact_solution_gradient[1] : -2.79173
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.610912,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.610912, 0)
+exact_solution_gradient[0] : 0.453926
+exact_solution_gradient[1] : -2.67537
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.514088,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.514088, 0)
+exact_solution_gradient[0] : 0.0772213
+exact_solution_gradient[1] : -2.60958
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.5625,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.5625, 0)
+exact_solution_gradient[0] : 0.340506
+exact_solution_gradient[1] : -2.56195
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.610912,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.610912, 0)
+exact_solution_gradient[0] : 0.595929
+exact_solution_gradient[1] : -2.45517
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.514088,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.514088, 0)
+exact_solution_gradient[0] : 0.0938394
+exact_solution_gradient[1] : -2.31528
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.5625,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.5625, 0)
+exact_solution_gradient[0] : 0.413783
+exact_solution_gradient[1] : -2.27302
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.610912,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.610912, 0)
+exact_solution_gradient[0] : 0.724174
+exact_solution_gradient[1] : -2.17828
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.639088, 0)
+exact_solution_gradient[0] : 0.562612
+exact_solution_gradient[1] : -2.57898
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.6875, 0)
+exact_solution_gradient[0] : 0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.639088,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.639088, 0.735912, 0)
+exact_solution_gradient[0] : 0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.639088, 0)
+exact_solution_gradient[0] : 0.738615
+exact_solution_gradient[1] : -2.36671
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.6875, 0)
+exact_solution_gradient[0] : 0.969679
+exact_solution_gradient[1] : -2.17191
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.6875,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.6875, 0.735912, 0)
+exact_solution_gradient[0] : 1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.639088,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.639088, 0)
+exact_solution_gradient[0] : 0.897566
+exact_solution_gradient[1] : -2.0998
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.6875,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.6875, 0)
+exact_solution_gradient[0] : 1.17835
+exact_solution_gradient[1] : -1.92697
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+quadrature_point_position : [3](0.735912,0.735912,0)
+p_gauss_point_geometry->Center() : Point (0.735912, 0.735912, 0)
+exact_solution_gradient[0] : 1.43194
+exact_solution_gradient[1] : -1.70965
+interpolated_solution_gradient[0] : 0
+interpolated_solution_gradient[1] : 0
+L2_norm_error : 3.91357e-07
+[34mIteration # 0[0m
+[31mError between iterations: 50.60624630848452[0m
+[34mIteration # 1[0m
+[31mError between iterations: 6.959038279720862e-16[0m
+[32m*** CONVERGENCE ACHIEVED ***[0m
+[32mL2-Norm Error: [0.00062559][0m
+::[Extended Gradient Method Poisson Problem IGA Simulation]:: : Analysis -END-  
+Deregistering ConvectionDiffusionApplication
+Deregistering IgaApplication
+Deregistering KratosMultiphysics

@@ -1,0 +1,5438 @@
+ |  /           |                  
+ ' /   __| _` | __|  _ \   __|    
+ . \  |   (   | |   (   |\__ \  
+_|\_\_|  \__,_|\__|\___/ ____/
+           Multi-Physics 9.5."0"-convdiff/embedded_extended_gradient_method-2c81c26a62-Release-x86_64
+           Compiled for GNU/Linux and Python3.10 with GCC-11.4
+Compiled with threading support.
+Maximum number of threads: 32.
+Importing    KratosConvectionDiffusionApplication 
+ KRATOS ___ ___  _  ___   __   ___ ___ ___ ___ 
+       / __/ _ || || | | / /__|   |_ _| __| __|
+      | (_| (_) | .` || V /___| |) | || _|| _| 
+       |___|___/|_||_| |_/    |___/___|_| |_|  APPLICATION
+::[ConvectionDiffusionSolver]:: : Construction finished 
+ConvectionDiffusionStationarySolver: Construction finished 
+::[ConvectionDiffusionSolver]:: : Variables ADDED 
+[WARNING] DEPRECATION-Warning; KratosModelerFactory: please use "KratosModelParametersFactory" instead. 
+[WARNING] Model: Trying to create a root modelpart with name CartesianBackgroundMeshModelPart however a ModelPart with the same name already exists. 
+Returning the already existent ModelPart.
+SingleImportModelPart: Reading model part from file: "/localdata/Extended Gradient Method Kratos/circunference_Conv_Diff_outer_BCs_triangles/circunference_Conv_Diff".mdpa
+ModelPartIO:   [Reading Nodes    : 307 nodes read]
+ModelPartIO:   [Reading Elements : 524 elements read] [Type: LaplacianElement2D3N]
+ModelPartIO:   [Reading Conditions : 88 conditions read] [Type: LineCondition2D2N]
+ModelPartIO:   [Total Lines Read : 1956]
+SingleImportModelPart: Finished reading model part from mdpa file.
+SingleImportModelPart: Reading model part from file: "/localdata/Extended Gradient Method Kratos/circunference_Conv_Diff_outer_BCs_triangles/background_mesh_3_triangles".mdpa
+ModelPartIO:   [Reading Nodes    : 121 nodes read]
+ModelPartIO:   [Reading Elements : 200 elements read] [Type: LaplacianElement2D3N]
+ModelPartIO:   [Reading Conditions : 10 conditions read] [Type: LineCondition2D2N]
+ModelPartIO:   [Reading Conditions : 10 conditions read] [Type: LineCondition2D2N]
+ModelPartIO:   [Reading Conditions : 10 conditions read] [Type: LineCondition2D2N]
+ModelPartIO:   [Reading Conditions : 10 conditions read] [Type: LineCondition2D2N]
+ModelPartIO:   [Total Lines Read : 823]
+SingleImportModelPart: Finished reading model part from mdpa file.
+::[PythonSolver]::: Reading model part. 
+::[PythonSolver]::: Using already imported model part - no reading necessary. 
+ModelPart: -CartesianBackgroundMeshModelPart- model part
+    Buffer Size : 1
+    Number of tables : 0
+    Number of sub model parts : 5
+    Current solution step index : 0
+    DOMAIN_SIZE : 2
+    CONVECTION_DIFFUSION_SETTINGS : 0x60dbc3d30890
+
+    Number of Geometries  : 0
+    Mesh 0 :
+        Number of Nodes       : 121
+        Number of Properties  : 1
+        Number of Elements    : 200
+        Number of Conditions  : 40
+        Number of Constraints : 0
+
+    -CNVDFFParts_surface- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 121
+            Number of Properties  : 0
+            Number of Elements    : 200
+            Number of Conditions  : 0
+            Number of Constraints : 0
+    -ImposedTemperature2D_bottom_DBC- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 11
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 10
+            Number of Constraints : 0
+    -ImposedTemperature2D_left_DBC- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 11
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 10
+            Number of Constraints : 0
+    -ImposedTemperature2D_right_DBC- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 11
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 10
+            Number of Constraints : 0
+    -ImposedTemperature2D_top_DBC- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 11
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 10
+            Number of Constraints : 0
+ 
+::[PythonSolver]:: : Finished reading model part. 
+Read materials: Started
+Read materials: No constitutive law defined for material ID: 1
+Read materials: Finished
+::[ConvectionDiffusionSolver]:: : Materials were successfully imported. 
+-CartesianBackgroundMeshModelPart- model part
+    Buffer Size : 1
+    Number of tables : 0
+    Number of sub model parts : 5
+    Current solution step index : 0
+    DOMAIN_SIZE : 2
+    CONVECTION_DIFFUSION_SETTINGS : 0x60dbc3d30890
+    IS_RESTARTED : 0
+    DELTA_TIME : 0
+    TIME : 0
+    STEP : 0
+
+    Number of Geometries  : 0
+    Mesh 0 :
+        Number of Nodes       : 121
+        Number of Properties  : 2
+        Number of Elements    : 200
+        Number of Conditions  : 40
+        Number of Constraints : 0
+
+    -CNVDFFParts_surface- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 121
+            Number of Properties  : 0
+            Number of Elements    : 200
+            Number of Conditions  : 0
+            Number of Constraints : 0
+    -ImposedTemperature2D_bottom_DBC- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 11
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 10
+            Number of Constraints : 0
+    -ImposedTemperature2D_left_DBC- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 11
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 10
+            Number of Constraints : 0
+    -ImposedTemperature2D_right_DBC- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 11
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 10
+            Number of Constraints : 0
+    -ImposedTemperature2D_top_DBC- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 11
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 10
+            Number of Constraints : 0
+
+
+-ThermalModelPart- model part
+    Buffer Size : 1
+    Number of tables : 0
+    Number of sub model parts : 2
+    Current solution step index : 0
+
+    Number of Geometries  : 0
+    Mesh 0 :
+        Number of Nodes       : 307
+        Number of Properties  : 1
+        Number of Elements    : 524
+        Number of Conditions  : 88
+        Number of Constraints : 0
+
+    -CNVDFFParts_Part_Surface- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 307
+            Number of Properties  : 0
+            Number of Elements    : 524
+            Number of Conditions  : 0
+            Number of Constraints : 0
+    -ImposedTemperature2D_Dirichlet_Boundary- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 88
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 88
+            Number of Constraints : 0
+
+
+
+: 
+::[ConvectionDiffusionSolver]::: ModelPart prepared for Solver. 
+::[ConvectionDiffusionSolver]:: : DOF's ADDED 
+[WARNING] VtkOutput: Modelpart "CartesianBackgroundMeshModelPart" has both elements and conditions.
+Giving precedence to elements and writing only elements!
+::[ConvectionDiffusionSolver]:: : Initializing ... 
+Linear-Solver-Factory: Constructing a regular (non-complex) linear-solver 
+::[ConvectionDiffusionSolver]:: : Finished initialization. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Deprecated method called in "/localdata/python_venv/kratos/lib/python3.10/site-packages/KratosMultiphysics/analysis_stage.py" in line 322: Iterating through "Parameters" object is deprecated, please use the "values" method instead
+LaplacianElement #1 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #2 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 0.1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #3 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #4 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #5 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #6 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #7 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #8 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #9 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #10 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #11 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #12 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #13 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #14 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #15 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #16 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #17 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #18 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #19 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 0.1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.0333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #20 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.0666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #21 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #22 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 0.2, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #23 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #24 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #25 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #26 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #27 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #28 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #29 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #30 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #31 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #32 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #33 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #34 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #35 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #36 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #37 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #38 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #39 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 0.2, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.133333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #40 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.2, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.1, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.166667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #41 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.2, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #42 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 0.3, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.2, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #43 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #44 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #45 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #46 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #47 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.942772318614702
+LaplacianElement #48 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.8998042382158409
+LaplacianElement #49 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.7656292623100511
+INTERSECTED LaplacianElement #49 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #50 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.3733239766221983
+INTERSECTED LaplacianElement #50 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #51 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.8677673134953992
+LaplacianElement #52 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.27118592532403263
+INTERSECTED LaplacianElement #52 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #53 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #54 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.8425765565675594
+INTERSECTED LaplacianElement #54 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #55 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #56 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #57 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #58 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #59 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.2, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 0.3, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #60 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.3, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #61 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.3, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #62 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 0.4, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.3, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #63 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #64 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #65 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.8998042380918201
+LaplacianElement #66 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.9427723185962507
+LaplacianElement #67 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.11390135949082672
+INTERSECTED LaplacianElement #67 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #68 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.11390135965307506
+INTERSECTED 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #68 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #69 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #70 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #71 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #72 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #73 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.22780271896498597
+INTERSECTED LaplacianElement #73 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #74 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #75 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #76 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.84257655689489
+INTERSECTED LaplacianElement #76 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #77 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #78 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #79 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.3, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 0.4, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #80 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.4, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #81 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.4, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #82 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 0.5, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.4, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #83 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #84 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #85 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.3733239769098805
+INTERSECTED LaplacianElement #85 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #86 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.765629262153791
+INTERSECTED LaplacianElement #86 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #87 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #88 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #89 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #90 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #91 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #92 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #93 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #94 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #95 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.8677673135064325
+LaplacianElement #96 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.27118592529685875
+INTERSECTED LaplacianElement #96 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #97 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #98 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #99 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.4, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 0.5, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #100 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.5, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #101 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.5, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #102 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 0.6, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.5, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #103 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #104 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #105 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.27118592549893594
+INTERSECTED LaplacianElement #105 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #106 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.8677673135505772
+LaplacianElement #107 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #108 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #109 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #110 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #111 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #112 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #113 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #114 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #115 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.7656292619394366
+INTERSECTED 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #115 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #116 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.37332397680044327
+INTERSECTED LaplacianElement #116 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #117 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #118 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #119 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.5, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 0.6, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #120 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.6, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #121 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.6, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #122 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 0.7, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.6, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #123 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #124 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #125 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.842576556950132
+INTERSECTED LaplacianElement #125 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #126 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #127 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #128 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.22780271906328176
+INTERSECTED LaplacianElement #128 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #129 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #130 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #131 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.0
+LaplacianElement #132 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.0
+LaplacianElement #133 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.11390135951543669
+INTERSECTED LaplacianElement #133 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #134 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.11390135943855495
+INTERSECTED LaplacianElement #134 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #135 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.9427723188255799
+LaplacianElement #136 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.899804238157909
+LaplacianElement #137 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #138 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #139 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.6, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 0.7, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #140 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.7, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #141 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.7, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #142 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 0.8, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.7, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #143 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #144 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #145 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #146 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #147 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.842576556682483
+INTERSECTED LaplacianElement #147 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #148 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #149 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.2711859255033848
+INTERSECTED LaplacianElement #149 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #150 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.8677673135395435
+LaplacianElement #151 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.37332397649089455
+INTERSECTED LaplacianElement #151 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+LaplacianElement #152 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.7656292622079964
+INTERSECTED LaplacianElement #152 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+LaplacianElement #153 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+0.8998042379943905
+LaplacianElement #154 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+0.9427723186661092
+LaplacianElement #155 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #156 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #157 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #158 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #159 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.7, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 0.8, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #160 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.8, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #161 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.8, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #162 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 0.9, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.8, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #163 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #164 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #165 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #166 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #167 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #168 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #169 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #170 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #171 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #172 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #173 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #174 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #175 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #176 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #177 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+LaplacianElement #178 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #179 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.8, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 0.9, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.833333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #180 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.9, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.866667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #181 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.9, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0666667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #182 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.1, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0, 0.9, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Center	 :  (0.0333333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #183 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.166667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #184 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.2, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.1, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.1, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.133333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #185 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #186 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #187 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #188 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #189 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #190 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #191 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #192 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #193 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #194 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #195 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #196 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+
+
+
+LaplacianElement #197 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.866667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #198 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.9, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.8, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.833333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+LaplacianElement #199 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 0.9, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (1, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.966667, 0.933333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+1.0
+LaplacianElement #200 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (1, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.9, 1, 0)
+    Dofs :
+        Fix TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.9, 0.9, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.933333, 0.966667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+1.0
+::[Extended Gradient Method Convection-Diffusion Simulation]:: : Analysis -START-  
+ResidualBasedLinearStrategy: Setup Dofs Time: 0.000206057 [s]
+ResidualBasedLinearStrategy: Setup System Time: 9.117e-06 [s]
+ResidualBasedLinearStrategy: System Matrix Resize Time: 6.2362e-05 [s]
+ResidualBasedLinearStrategy: System Construction Time: 0.000283561 [s]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+i am here
+POLYGON ((0.5 0.2, 0.5 0.3, 0.4 0.2, 0.5 0.2))
+LaplacianElement #49 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.233333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[-0.07133919 -0.99745211  0.        ]
+i am here
+POLYGON ((0.5 0.3, 0.4 0.3, 0.4 0.2, 0.5 0.3))
+LaplacianElement #50 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.433333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[-0.28173256 -0.95949297  0.        ]
+i am here
+POLYGON ((0.6 0.3, 0.5 0.3, 0.5 0.2, 0.6 0.3))
+LaplacianElement #52 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[ 0.14231484 -0.98982144  0.        ]
+i am here
+POLYGON ((0.7 0.3, 0.6 0.3, 0.6 0.2, 0.7 0.3))
+LaplacianElement #54 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.2, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.266667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[ 0.51027003 -0.86001424  0.        ]
+i am here
+POLYGON ((0.4 0.3, 0.4 0.4, 0.3 0.3, 0.4 0.3))
+LaplacianElement #67 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[-0.65486074 -0.75574957  0.        ]
+i am here
+POLYGON ((0.4 0.4, 0.3 0.4, 0.3 0.3, 0.4 0.4))
+LaplacianElement #68 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[-0.73189452 -0.68141794  0.        ]
+i am here
+POLYGON ((0.7 0.3, 0.7 0.4, 0.6 0.3, 0.7 0.3))
+LaplacianElement #73 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.333333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[ 0.70710678 -0.70710678  0.        ]
+i am here
+POLYGON ((0.8 0.4, 0.7 0.4, 0.7 0.3, 0.8 0.4))
+LaplacianElement #76 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.3, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.366667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[ 0.86001424 -0.51027003  0.        ]
+i am here
+POLYGON ((0.3 0.4, 0.3 0.5, 0.2 0.4, 0.3 0.4))
+LaplacianElement #85 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.433333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[-0.95949297 -0.28173255  0.        ]
+i am here
+POLYGON ((0.3 0.5, 0.2 0.5, 0.2 0.4, 0.3 0.5))
+LaplacianElement #86 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.233333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[-0.9942703  -0.10689512  0.        ]
+i am here
+POLYGON ((0.8 0.5, 0.7 0.5, 0.7 0.4, 0.8 0.5))
+LaplacianElement #96 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.4, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.466667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[ 0.9942703  -0.10689512  0.        ]
+i am here
+POLYGON ((0.3 0.5, 0.3 0.6, 0.2 0.5, 0.3 0.5))
+LaplacianElement #105 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[-0.9942703   0.10689512  0.        ]
+i am here
+POLYGON ((0.8 0.5, 0.8 0.6, 0.7 0.5, 0.8 0.5))
+LaplacianElement #115 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.766667, 0.533333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[0.9942703  0.10689512 0.        ]
+i am here
+POLYGON ((0.8 0.6, 0.7 0.6, 0.7 0.5, 0.8 0.6))
+LaplacianElement #116 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.8, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.7, 0.5, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.733333, 0.566667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[0.95949297 0.28173256 0.        ]
+i am here
+POLYGON ((0.3 0.6, 0.3 0.7, 0.2 0.6, 0.3 0.6))
+LaplacianElement #125 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.2, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.266667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[-0.86001424  0.51027003  0.        ]
+i am here
+POLYGON ((0.4 0.7, 0.3 0.7, 0.3 0.6, 0.4 0.7))
+
+
+
+
+
+
+LaplacianElement #128 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.333333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[-0.70710678  0.70710678  0.        ]
+i am here
+POLYGON ((0.7 0.6, 0.7 0.7, 0.6 0.6, 0.7 0.6))
+LaplacianElement #133 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.666667, 0.633333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[0.73189452 0.68141794 0.        ]
+i am here
+POLYGON ((0.7 0.7, 0.6 0.7, 0.6 0.6, 0.7 0.7))
+LaplacianElement #134 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.7, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.6, 0.6, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.633333, 0.666667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[0.65486074 0.75574957 0.        ]
+i am here
+POLYGON ((0.4 0.7, 0.4 0.8, 0.3 0.7, 0.4 0.7))
+LaplacianElement #147 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.4, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.3, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.366667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[-0.51027003  0.86001424  0.        ]
+i am here
+POLYGON ((0.5 0.7, 0.5 0.8, 0.4 0.7, 0.5 0.7))
+LaplacianElement #149 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.4, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.466667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[-0.10689512  0.9942703   0.        ]
+i am here
+POLYGON ((0.6 0.7, 0.6 0.8, 0.5 0.7, 0.6 0.7))
+LaplacianElement #151 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.566667, 0.733333, 0)
+
+    Jacobian in the origin	 : [2,2]((0,-0.1),(0.1,0))
+[0.28173256 0.95949297 0.        ]
+i am here
+POLYGON ((0.6 0.8, 0.5 0.8, 0.5 0.7, 0.6 0.8))
+LaplacianElement #152 : 
+    Working space dimension : 2
+    Local space dimension   : 2
+
+	Point 1	 :  (0.6, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 2	 :  (0.5, 0.8, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Point 3	 :  (0.5, 0.7, 0)
+    Dofs :
+        Free TEMPERATURE degree of freedom
+
+	Center	 :  (0.533333, 0.766667, 0)
+
+    Jacobian in the origin	 : [2,2]((-0.1,-0.1),(0,-0.1))
+[0.07133918 0.99745211 0.        ]
+i am here
+POLYGON ((0.5 0.2, 0.5 0.3, 0.4 0.2, 0.5 0.2))
+i am here
+POLYGON ((0.5 0.3, 0.4 0.3, 0.4 0.2, 0.5 0.3))
+i am here
+POLYGON ((0.6 0.3, 0.5 0.3, 0.5 0.2, 0.6 0.3))
+i am here
+POLYGON ((0.7 0.3, 0.6 0.3, 0.6 0.2, 0.7 0.3))
+i am here
+POLYGON ((0.4 0.3, 0.4 0.4, 0.3 0.3, 0.4 0.3))
+i am here
+POLYGON ((0.4 0.4, 0.3 0.4, 0.3 0.3, 0.4 0.4))
+i am here
+POLYGON ((0.7 0.3, 0.7 0.4, 0.6 0.3, 0.7 0.3))
+i am here
+POLYGON ((0.8 0.4, 0.7 0.4, 0.7 0.3, 0.8 0.4))
+i am here
+POLYGON ((0.3 0.4, 0.3 0.5, 0.2 0.4, 0.3 0.4))
+i am here
+POLYGON ((0.3 0.5, 0.2 0.5, 0.2 0.4, 0.3 0.5))
+i am here
+POLYGON ((0.8 0.5, 0.7 0.5, 0.7 0.4, 0.8 0.5))
+i am here
+POLYGON ((0.3 0.5, 0.3 0.6, 0.2 0.5, 0.3 0.5))
+i am here
+POLYGON ((0.8 0.5, 0.8 0.6, 0.7 0.5, 0.8 0.5))
+i am here
+POLYGON ((0.8 0.6, 0.7 0.6, 0.7 0.5, 0.8 0.6))
+i am here
+POLYGON ((0.3 0.6, 0.3 0.7, 0.2 0.6, 0.3 0.6))
+i am here
+POLYGON ((0.4 0.7, 0.3 0.7, 0.3 0.6, 0.4 0.7))
+i am here
+POLYGON ((0.7 0.6, 0.7 0.7, 0.6 0.6, 0.7 0.6))
+i am here
+POLYGON ((0.7 0.7, 0.6 0.7, 0.6 0.6, 0.7 0.7))
+i am here
+POLYGON ((0.4 0.7, 0.4 0.8, 0.3 0.7, 0.4 0.7))
+i am here
+POLYGON ((0.5 0.7, 0.5 0.8, 0.4 0.7, 0.5 0.7))
+i am here
+POLYGON ((0.6 0.7, 0.6 0.8, 0.5 0.7, 0.6 0.7))
+i am here
+POLYGON ((0.6 0.8, 0.5 0.8, 0.5 0.7, 0.6 0.8))
+1079.45848821459
+BuilderAndSolver: Clear Function called
+BuilderAndSolver: Clear Function called
+Deregistering ConvectionDiffusionApplication
+Deregistering KratosMultiphysics

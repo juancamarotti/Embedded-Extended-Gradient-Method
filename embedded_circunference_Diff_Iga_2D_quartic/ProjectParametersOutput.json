@@ -1,0 +1,172 @@
+{
+    "analysis_stage": "KratosMultiphysics.ConvectionDiffusionApplication.convection_diffusion_analysis",
+    "modelers": [
+        {
+            "Parameters": {
+                "echo_level": 0,
+                "ignore_variables_not_in_solution_step_data": false,
+                "input_filename": "circunference_Conv_Diff",
+                "model_part_name": "ThermalModelPart",
+                "reorder": false,
+                "reorder_consecutive": false,
+                "skip_timer": true
+            },
+            "kratos_module": "KratosMultiphysics",
+            "modeler_name": "import_mdpa_modeler"
+        },
+        {
+            "Parameters": {
+                "cad_model_part_name": "IgaBackgroundMeshModelPart",
+                "echo_level": 0,
+                "geometry_file_name": "background_geometry.cad.json",
+                "output_geometry_file_name": "laplacian_iga_kratos_0.georhino.json"
+            },
+            "modeler_name": "CadIoModeler"
+        },
+        {
+            "Parameters": {
+                "analysis_model_part_name": "IgaBackgroundMeshModelPart",
+                "cad_model_part_name": "IgaBackgroundMeshModelPart",
+                "echo_level": 1,
+                "physics_file_name": "physics.iga.json"
+            },
+            "modeler_name": "IgaModeler"
+        },
+        {
+            "Parameters": {
+                "echo_level": 0,
+                "physics_file_name": "refinements.iga.json"
+            },
+            "modeler_name": "RefinementModeler"
+        }
+    ],
+    "output_processes": {
+        "output_process_list": [
+            {
+                "Parameters": {
+                    "file_label": "step",
+                    "integration_point_results": [],
+                    "model_part_name": "IgaBackgroundMeshModelPart",
+                    "nodal_results": [
+                        "TEMPERATURE"
+                    ],
+                    "output_control_type": "time",
+                    "output_file_name": "laplacian_iga.post.res",
+                    "output_frequency": 0.1
+                },
+                "kratos_module": "IgaApplication",
+                "python_module": "iga_output_process"
+            }
+        ]
+    },
+    "problem_data": {
+        "echo_level": 2,
+        "end_time": 1.0,
+        "parallel_type": "OpenMP",
+        "problem_name": "iga_diffusion_example",
+        "start_time": 0
+    },
+    "processes": {
+        "additional_processes": [
+            {
+                "Parameters": {
+                    "analysis_model_part_name": "IgaBackgroundMeshModelPart",
+                    "echo_level": 4,
+                    "physics_file_name": "physics.iga.json"
+                },
+                "kratos_module": "KratosMultiphysics.IgaApplication",
+                "process_name": "AssignIgaExternalConditionsProcess",
+                "python_module": "assign_iga_external_conditions_process"
+            }
+        ],
+        "constraints_process_list": [],
+        "list_other_processes": [
+            {
+                "Parameters": {
+                    "background_model_part_name": "IgaBackgroundMeshModelPart",
+                    "embedded_body_model_part_name": "ThermalModelPart.ImposedTemperature2D_Dirichlet_Boundary",
+                    "keep_external_domain": true
+                },
+                "kratos_module": "KratosMultiphysics.IgaApplication",
+                "process_name": "ClassifyElementsExtendedGradientMethodProcess",
+                "python_module": "classify_elements_extended_gradient_method_process"
+            }
+        ]
+    },
+    "solver_settings": {
+        "analysis_type": "linear",
+        "assign_neighbour_elements_to_conditions": true,
+        "auxiliary_variables_list": [],
+        "block_builder": true,
+        "clear_storage": false,
+        "compute_reactions": false,
+        "convection_diffusion_variables": {
+            "convection_variable": "CONVECTION_VELOCITY",
+            "density_variable": "DENSITY",
+            "diffusion_variable": "CONDUCTIVITY",
+            "gradient_variable": "TEMPERATURE_GRADIENT",
+            "mesh_velocity_variable": "MESH_VELOCITY",
+            "projection_variable": "PROJECTED_SCALAR1",
+            "reaction_gradient_variable": "REACTION",
+            "reaction_variable": "REACTION_FLUX",
+            "specific_heat_variable": "SPECIFIC_HEAT",
+            "surface_source_variable": "FACE_HEAT_FLUX",
+            "transfer_coefficient_variable": "TRANSFER_COEFFICIENT",
+            "unknown_variable": "TEMPERATURE",
+            "velocity_variable": "VELOCITY",
+            "volume_source_variable": "HEAT_FLUX"
+        },
+        "convergence_criterion": "residual_criterion",
+        "domain_size": 2,
+        "echo_level": 2,
+        "element_replace_settings": {
+            "element_name": ""
+        },
+        "gradient_dofs": false,
+        "line_search": false,
+        "linear_solver_settings": {
+            "block_size": 1,
+            "coarse_enough": 1000,
+            "coarsening_type": "aggregation",
+            "gmres_krylov_space_dimension": 100,
+            "krylov_type": "gmres",
+            "max_iteration": 5000,
+            "max_levels": -1,
+            "post_sweeps": 1,
+            "pre_sweeps": 1,
+            "preconditioner_type": "amg",
+            "provide_coordinates": false,
+            "scaling": false,
+            "smoother_type": "ilu0",
+            "solver_type": "amgcl",
+            "tolerance": 1e-09,
+            "use_block_matrices_if_possible": true,
+            "use_gpgpu": false,
+            "verbosity": 1
+        },
+        "material_import_settings": {
+            "materials_filename": "ConvectionDiffusionMaterials.json"
+        },
+        "max_iteration": 10,
+        "model_import_settings": {
+            "input_type": "use_input_model_part"
+        },
+        "model_part_name": "IgaBackgroundMeshModelPart",
+        "move_mesh_flag": false,
+        "problem_domain_sub_model_part_list": [
+            ""
+        ],
+        "processes_sub_model_part_list": [
+            ""
+        ],
+        "reform_dofs_at_each_step": false,
+        "residual_absolute_tolerance": 1e-07,
+        "residual_relative_tolerance": 1e-05,
+        "solution_absolute_tolerance": 1e-07,
+        "solution_relative_tolerance": 1e-05,
+        "solver_type": "stationary",
+        "time_stepping": {
+            "time_step": 1.0
+        }
+    }
+}

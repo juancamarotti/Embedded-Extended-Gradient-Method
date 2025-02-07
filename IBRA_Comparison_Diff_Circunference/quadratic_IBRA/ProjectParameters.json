@@ -1,0 +1,147 @@
+{
+  //"analysis_stage"   : "KratosMultiphysics.IgaApplication.new_extended_gradient_method_poisson_problem_analysis",
+  "analysis_stage"   : "KratosMultiphysics.ConvectionDiffusionApplication.convection_diffusion_analysis",
+  "problem_data": {
+    "problem_name": "iga_diffusion_example",
+    "echo_level": 0,
+    "parallel_type": "OpenMP",
+    "start_time": 0,
+    "end_time": 1.0
+  },
+  "solver_settings"  : {
+    "solver_type"                        : "stationary",
+    "analysis_type"                      : "linear",
+    "model_part_name"                    : "IgaBackgroundMeshModelPart",
+    "domain_size"                        : 2,
+    "model_import_settings"              : {
+      "input_type"     : "use_input_model_part"
+    },
+    "material_import_settings"           : {
+        "materials_filename" : "ConvectionDiffusionMaterials.json"
+    },
+    "line_search"                        : false,
+    "echo_level"                         : 0,
+    "compute_reactions"                  : false,
+    "max_iteration"                      : 10,
+    "convergence_criterion"              : "residual_criterion",
+    "solution_relative_tolerance"        : 1e-5,
+    "solution_absolute_tolerance"        : 1e-7,
+    "residual_relative_tolerance"        : 1e-5,
+    "residual_absolute_tolerance"        : 1e-7,
+    "time_stepping"                      : {
+        "time_step" : 1.0
+    },
+    "element_replace_settings" : {
+            "element_name" : ""
+    }
+    // "linear_solver_settings": {
+    //   "solver_type": "amgcl",
+    //   "verbosity": 4
+    // }
+},
+  "modelers": [
+    {
+      "modeler_name": "CadIoModeler",
+      "Parameters": {
+        "echo_level": 0,
+        "cad_model_part_name": "IgaBackgroundMeshModelPart",
+        "geometry_file_name": "geometry.cad.json",
+        "output_geometry_file_name": "laplacian_iga_kratos_0.georhino.json"
+      }
+    },
+    {
+      "modeler_name": "IgaModeler",
+      "Parameters": {
+        "echo_level": 1,
+        "cad_model_part_name": "IgaBackgroundMeshModelPart",
+        "analysis_model_part_name": "IgaBackgroundMeshModelPart",
+        "physics_file_name": "physics.iga.json"
+      }
+    },
+    {
+      "modeler_name": "RefinementModeler",
+      "Parameters": {
+        "echo_level": 2,
+        "physics_file_name": "refinements.iga.json"
+      }
+    }
+  ],
+  "processes": {
+    "additional_processes": [
+      {
+        "python_module": "assign_iga_external_conditions_process",
+        "kratos_module" : "KratosMultiphysics.IgaApplication",
+        "process_name"  : "AssignIgaExternalConditionsProcess",
+        "Parameters": {
+          "echo_level": 4,
+          "analysis_model_part_name": "IgaBackgroundMeshModelPart",
+          "physics_file_name": "physics.iga.json"
+        }
+      },
+      {
+        "kratos_module": "IgaApplication",
+        "python_module": "output_quadrature_domain_process",
+        "Parameters": {
+          "output_file_name": "IgaBackgroundMeshModelPart_integrationdomain.json",
+          "model_part_name": "IgaBackgroundMeshModelPart",
+          "output_geometry_elements": true,
+          "output_geometry_conditions": false
+        }
+      }
+    ],
+    // "dirichlet_process_list": [
+      // {
+      //   "kratos_module": "KratosMultiphysics",
+      //   "python_module": "assign_vector_variable_to_nodes_process",
+      //   "Parameters": {
+      //     "model_part_name": "skin_model_part_in",
+      //     "variable_name": "VELOCITY",
+      //     "value"           : ["-cos(2*pi*x)*sin(2*pi*y)+sin(2*pi*y)", "sin(2*pi*x)*cos(2*pi*y)-sin(2*pi*x)", "0.0"] // PUTTI
+      //     // "value"           : ["x", "-y", "0.0"]
+      //     // "value"           : ["x*2-y*2", "-2*x*y", "0.0"]
+      //   }
+      // }
+    // ],
+    "constraints_process_list"        : [],
+    "list_other_processes"            : [
+    {
+      "python_module": "calculate_L2_norm_error_process",
+        "kratos_module" : "KratosMultiphysics.IgaApplication",
+        "process_name"  : "CalculateL2NormErrorProcess",
+        "Parameters"    : {
+            "compute_error_model_part_name"                 : "IgaBackgroundMeshModelPart",
+            "analytical_solution"              : "sin(pi * x) * cos(pi * y)",
+            "unknown_variable_name"            : "TEMPERATURE"
+        }
+    },
+    {
+      "python_module" : "plot_error_distribution_process",
+      "kratos_module" : "KratosMultiphysics.IgaApplication",
+      "process_name"  : "PlotErrorDistributionProcess",
+      "Parameters"    : {
+          "background_model_part_name"                 : "IgaBackgroundMeshModelPart",
+          "compute_error_model_part_name"                 : "IgaBackgroundMeshModelPart",
+          "analytical_solution"              : "np.sin(np.pi * x) * np.cos(np.pi * y)",
+          "unknown_variable_name"            : "TEMPERATURE"
+      }
+  }
+]
+},
+"output_processes": {
+  "output_process_list": [
+    {
+      "kratos_module": "IgaApplication",
+      "python_module": "iga_output_process",
+      "Parameters": {
+        "nodal_results": [ "TEMPERATURE" ],
+        "integration_point_results": [],
+        "output_file_name": "laplacian_iga.post.res",
+        "model_part_name": "IgaBackgroundMeshModelPart",
+        "file_label": "step",
+        "output_control_type": "time",
+        "output_frequency": 0.1
+      }
+    }
+  ]
+}
+}

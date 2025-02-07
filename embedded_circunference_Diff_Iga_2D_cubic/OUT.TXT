@@ -1,0 +1,95 @@
+ |  /           |                  
+ ' /   __| _` | __|  _ \   __|    
+ . \  |   (   | |   (   |\__ \  
+_|\_\_|  \__,_|\__|\___/ ____/
+           Multi-Physics 9.5."0"-convdiff/embedded_extended_gradient_method-2c81c26a62-Release-x86_64
+           Compiled for GNU/Linux and Python3.10 with GCC-11.4
+Compiled with threading support.
+Maximum number of threads: 32.
+Importing    KratosIgaApplication 
+    KRATOS  _____ _____
+           |_   _/ ____|   /\
+             | || |  __   /  \
+             | || | |_ | / /\ \
+            _| || |__| |/ ____ \
+           |_____\_____/_/    \_\
+Initializing KratosIgaApplication...
+Importing    KratosConvectionDiffusionApplication 
+ KRATOS ___ ___  _  ___   __   ___ ___ ___ ___ 
+       / __/ _ || || | | / /__|   |_ _| __| __|
+      | (_| (_) | .` || V /___| |) | || _|| _| 
+       |___|___/|_||_| |_/    |___/___|_| |_|  APPLICATION
+::[ConvectionDiffusionSolver]:: : Construction finished 
+ConvectionDiffusionStationarySolver: Construction finished 
+::[ConvectionDiffusionSolver]:: : Variables ADDED 
+[WARNING] DEPRECATION-Warning; KratosModelerFactory: please use "KratosModelParametersFactory" instead. 
+SingleImportModelPart: Reading model part from file: "/localdata/Extended Gradient Method Kratos/embedded_circunference_Conv_Iga_2D_cubic/circunference_Conv_Diff".mdpa
+ModelPartIO:   [Reading Nodes    : 307 nodes read]
+ModelPartIO:   [Reading Elements : 524 elements read] [Type: LaplacianElement2D3N]
+ModelPartIO:   [Reading Conditions : 88 conditions read] [Type: LineCondition2D2N]
+ModelPartIO:   [Total Lines Read : 1956]
+SingleImportModelPart: Finished reading model part from mdpa file.
+CreateQuadraturePointGeometries: Creating LaplacianIGAElements of type: element for 1 geometries in IgaBackgroundMeshModelPart-SubModelPart.
+"starting to create integration points" : starting to create integration points
+"finalizing to create integration points" : finalizing to create integration points
+CreateQuadraturePointGeometries: Creating SupportLaplacianConditions of type: condition for 4 geometries in ExternalSupportNitsche-SubModelPart.
+::[PythonSolver]::: Reading model part. 
+::[PythonSolver]::: Using already imported model part - no reading necessary. 
+ModelPart: -IgaBackgroundMeshModelPart- model part
+    Buffer Size : 1
+    Number of tables : 0
+    Number of sub model parts : 2
+    Current solution step index : 0
+    DOMAIN_SIZE : 2
+    CONVECTION_DIFFUSION_SETTINGS : 0x60b40c144940
+
+    Number of Geometries  : 5
+    Mesh 0 :
+        Number of Nodes       : 2275
+        Number of Properties  : 0
+        Number of Elements    : 28224
+        Number of Conditions  : 1134
+        Number of Constraints : 0
+
+    -ExternalSupportNitsche- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 656
+            Number of Properties  : 0
+            Number of Elements    : 0
+            Number of Conditions  : 1134
+            Number of Constraints : 0
+    -IgaBackgroundMeshModelPart- model part
+        Number of tables : 0
+        Number of sub model parts : 0
+
+        Number of Geometries  : 0
+        Mesh 0 :
+            Number of Nodes       : 2025
+            Number of Properties  : 0
+            Number of Elements    : 28224
+            Number of Conditions  : 0
+            Number of Constraints : 0
+ 
+::[PythonSolver]:: : Finished reading model part. 
+Read materials: Started
+[WARNING] ReadMaterialsUtility: Materials for SubModelPart "IgaBackgroundMeshModelPart.ExternalSupportNitsche" is overriding Parent-ModelPart "IgaBackgroundMeshModelPart"!
+[WARNING] ReadMaterialsUtility: WARNING:: The properties ID: 1 is already defined in model part IgaBackgroundMeshModelPart.ExternalSupportNitsche. This will overwrite the existing values
+Read materials: No constitutive law defined for material ID: 1
+[WARNING] ReadMaterialsUtility: WARNING:: The properties ID: 1 already has variables.
+Read materials: No constitutive law defined for material ID: 1
+Read materials: Finished
+::[ConvectionDiffusionSolver]:: : Materials were successfully imported. 
+::[ConvectionDiffusionSolver]::: ModelPart prepared for Solver. 
+::[ConvectionDiffusionSolver]:: : DOF's ADDED 
+ReadParamatersFile: Reading file: "physics.iga.json"
+::[ConvectionDiffusionSolver]:: : Initializing ... 
+Linear-Solver-Factory: Constructing a regular (non-complex) linear-solver 
+::[ConvectionDiffusionSolver]:: : Finished initialization. 
+knot_vector_u : [0, 0.0238095, 0.047619, 0.0714286, 0.0952381, 0.119048, 0.142857, 0.166667, 0.190476, 0.214286, 0.238095, 0.261905, 0.285714, 0.309524, 0.333333, 0.357143, 0.380952, 0.404762, 0.428571, 0.452381, 0.47619, 0.5, 0.52381, 0.547619, 0.571429, 0.595238, 0.619048, 0.642857, 0.666667, 0.690476, 0.714286, 0.738095, 0.761905, 0.785714, 0.809524, 0.833333, 0.857143, 0.880952, 0.904762, 0.928571, 0.952381, 0.97619, 1]
+"starting intersected classification" : starting intersected classification
+"finishing intersected classification" : finishing intersected classification
+"starting inside classification" : starting inside classification

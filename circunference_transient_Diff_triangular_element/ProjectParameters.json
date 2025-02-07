@@ -1,0 +1,204 @@
+{
+    "analysis_stage"   : "KratosMultiphysics.ConvectionDiffusionApplication.extended_gradient_method_convection_diffusion_analysis",
+    "problem_data"     : {
+        "problem_name"  : "transient_diffusion",
+        "parallel_type" : "OpenMP",
+        "time_step"     : 0.001,
+        "start_time"    : 0.0,
+        "end_time"      : 0.03,
+        "echo_level"    : 0
+    },
+    "solver_settings"  : {
+        "solver_type"                        : "transient",
+        "analysis_type"                      : "linear",
+        "model_part_name"                    : "CartesianBackgroundMeshModelPart",
+        "domain_size"                        : 2,
+        "model_import_settings"              : {
+            "input_type"     : "use_input_model_part"
+        },
+        "material_import_settings"           : {
+            "materials_filename" : "ConvectionDiffusionMaterials.json"
+        },
+        "line_search"                        : false,
+        "echo_level"                         : 0,
+        "compute_reactions"                  : false,
+        "max_iteration"                      : 10,
+        "convergence_criterion"              : "residual_criterion",
+        "solution_relative_tolerance"        : 1e-5,
+        "solution_absolute_tolerance"        : 1e-7,
+        "residual_relative_tolerance"        : 1e-5,
+        "residual_absolute_tolerance"        : 1e-7,
+        "problem_domain_sub_model_part_list" : ["CNVDFFParts_surface"],
+        "processes_sub_model_part_list"      : ["TEMPERATURE_surface","ImposedTemperature2D_left_boundary","ImposedTemperature2D_right_boundary","ImposedTemperature2D_bottom_boundary","ImposedTemperature2D_top_boundary"],
+        "time_stepping"                      : {
+            "time_step" : 0.001
+        },
+        "element_replace_settings" : {
+                "element_name" : "EulerianConvDiff2D3N"
+        }
+    },
+    "modelers"             : [{
+        "kratos_module"            : "KratosMultiphysics",
+        "modeler_name"             : "import_mdpa_modeler",
+        "Parameters"               : {
+            "model_part_name"          : "ThermalModelPart",
+            "input_filename"           : "circunference_Conv_Diff"
+        }
+    },{
+        "kratos_module"            : "KratosMultiphysics",
+        "modeler_name"             : "import_mdpa_modeler",
+        "Parameters"               : {
+            "model_part_name"          : "CartesianBackgroundMeshModelPart",
+            "input_filename"           : "background_mesh_1800_elem"
+        }
+    }
+    ],
+    "processes"        : {
+        "initial_conditions_process_list" : [{
+            "python_module" : "assign_scalar_variable_process",
+            "kratos_module" : "KratosMultiphysics",
+            "process_name"  : "AssignScalarVariableProcess",
+            "Parameters"    : {
+                "model_part_name" : "CartesianBackgroundMeshModelPart",
+                "variable_name"   : "TEMPERATURE",
+                "interval"        : [0.0,0.0],
+                "constrained"     : false,
+                "value"           : 0.0
+            }
+        }],
+        "constraints_process_list"        : [{
+            "python_module" : "assign_scalar_variable_process",
+            "kratos_module" : "KratosMultiphysics",
+            "process_name"  : "AssignScalarVariableProcess",
+            "Parameters"    : {
+                "model_part_name" : "CartesianBackgroundMeshModelPart.ImposedTemperature2D_left_DBC",
+                "variable_name"   : "TEMPERATURE",
+                "interval"        : [0.0,"End"],
+                "constrained"     : true,
+                "value"           : 0.0
+            }
+        },{
+            "python_module" : "assign_scalar_variable_process",
+            "kratos_module" : "KratosMultiphysics",
+            "process_name"  : "AssignScalarVariableProcess",
+            "Parameters"    : {
+                "model_part_name" : "CartesianBackgroundMeshModelPart.ImposedTemperature2D_right_DBC",
+                "variable_name"   : "TEMPERATURE",
+                "interval"        : [0.0,"End"],
+                "constrained"     : true,
+                "value"           : 0.0
+            }
+        },{
+            "python_module" : "assign_scalar_variable_process",
+            "kratos_module" : "KratosMultiphysics",
+            "process_name"  : "AssignScalarVariableProcess",
+            "Parameters"    : {
+                "model_part_name" : "CartesianBackgroundMeshModelPart.ImposedTemperature2D_bottom_DBC",
+                "variable_name"   : "TEMPERATURE",
+                "interval"        : [0.0,"End"],
+                "constrained"     : true,
+                "value"           : "sin(pi*x)*cos(pi*y)"
+            }
+        },{
+            "python_module" : "assign_scalar_variable_process",
+            "kratos_module" : "KratosMultiphysics",
+            "process_name"  : "AssignScalarVariableProcess",
+            "Parameters"    : {
+                "model_part_name" : "CartesianBackgroundMeshModelPart.ImposedTemperature2D_top_DBC",
+                "variable_name"   : "TEMPERATURE",
+                "interval"        : [0.0,"End"],
+                "constrained"     : true,
+                "value"           : "sin(pi*x)*cos(pi*y)"
+            }
+        }],
+        "list_other_processes"            : [{
+            "python_module" : "assign_scalar_variable_process",
+            "kratos_module" : "KratosMultiphysics",
+            "process_name"  : "AssignScalarVariableProcess",
+            "Parameters"    : {
+                "model_part_name" : "CartesianBackgroundMeshModelPart",
+                "variable_name"   : "HEAT_FLUX",
+                "value"           : "2.0 * pi**2 * sin(pi*x) * cos(pi*y)",
+                "constrained"     : false
+            }
+        },
+        {
+            "python_module" : "define_active_elements_process",
+            "kratos_module" : "KratosMultiphysics.ConvectionDiffusionApplication",
+            "process_name"  : "DefineActiveElementsProcess",
+            "Parameters"    : {
+                "background_model_part_name"                 : "CartesianBackgroundMeshModelPart",
+                "embedded_body_model_part_name"              : "ThermalModelPart.ImposedTemperature2D_Dirichlet_Boundary",
+                "keep_external_domain"                       : true
+            }
+        },
+        {
+            "python_module" : "compute_L2_norm_error_process",
+            "kratos_module" : "KratosMultiphysics.ConvectionDiffusionApplication",
+            "process_name"  : "ComputeL2NormErrorProcess",
+            "Parameters"    : {
+                "background_model_part_name"                 : "CartesianBackgroundMeshModelPart",
+                "analytical_solution"              : "np.sin(np.pi * x) * np.cos(np.pi * y)",
+                "unknown_variable_name"            : "TEMPERATURE"
+            }
+        }]
+    },
+    "output_processes" : {
+        "gid_output" : [{
+            "python_module" : "gid_output_process",
+            "kratos_module" : "KratosMultiphysics",
+            "process_name"  : "GiDOutputProcess",
+            "Parameters"    : {
+                "model_part_name"        : "CartesianBackgroundMeshModelPart",
+                "postprocess_parameters" : {
+                    "result_file_configuration" : {
+                        "gidpost_flags"               : {
+                            "GiDPostMode"           : "GiD_PostBinary",
+                            "WriteDeformedMeshFlag" : "WriteDeformed",
+                            "WriteConditionsFlag"   : "WriteConditions",
+                            "MultiFileFlag"         : "SingleFile"
+                        },
+                        "file_label"                  : "time",
+                        "output_control_type"         : "time",
+                        "output_interval"             : 0,
+                        "body_output"                 : true,
+                        "node_output"                 : false,
+                        "skin_output"                 : false,
+                        "plane_output"                : [],
+                        "nodal_results"               : ["TEMPERATURE"],
+                        "nodal_nonhistorical_results" : [],
+                        "gauss_point_results"         : []
+                    },
+                    "point_data_configuration"  : []
+                },
+                "output_name"            : "gid_output/transient_diffusion"
+            }
+        }],
+        "vtk_output" : [{
+            "python_module" : "vtk_output_process",
+            "kratos_module" : "KratosMultiphysics",
+            "process_name"  : "VtkOutputProcess",
+            "Parameters"    : {
+                "model_part_name"                             : "CartesianBackgroundMeshModelPart",
+                "output_control_type"                         : "step",
+                "output_interval"                             : 0,
+                "file_format"                                 : "ascii",
+                "output_precision"                            : 7,
+                "output_sub_model_parts"                      : false,
+                "output_path"                                 : "vtk_output",
+                "save_output_files_in_folder"                 : true,
+                "nodal_solution_step_data_variables"          : ["TEMPERATURE"],
+                "nodal_data_value_variables"                  : [],
+                "element_data_value_variables"                : [],
+                "condition_data_value_variables"              : [],
+                "gauss_point_variables_extrapolated_to_nodes" : []
+            }
+        }]
+    },
+    "restart_options"  : {
+        "SaveRestart"      : false,
+        "RestartFrequency" : 0,
+        "LoadRestart"      : false,
+        "Restart_Step"     : 0
+    }
+}

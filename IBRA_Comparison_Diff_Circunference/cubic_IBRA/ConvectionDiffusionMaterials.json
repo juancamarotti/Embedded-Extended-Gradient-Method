@@ -1,0 +1,23 @@
+{
+  "properties" : [{
+      "model_part_name" : "IgaBackgroundMeshModelPart",
+      "properties_id"   : 1,
+      "Material"        : {
+          "Variables" : {
+              "DENSITY"       : 1.0,
+              "CONDUCTIVITY"  : 1.0,
+              "SPECIFIC_HEAT" : 1.0
+          },
+          "Tables"    : null
+      }
+  },
+  {
+    "model_part_name": "IgaBackgroundMeshModelPart.ExternalSupportNitsche",
+    "properties_id": 1,
+    "Material": {
+      "Variables": { "PENALTY_FACTOR": -1}, // 1e14
+      "Tables": {}
+    }
+  }
+]
+}
