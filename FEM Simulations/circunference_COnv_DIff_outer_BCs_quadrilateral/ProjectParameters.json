@@ -1,7 +1,7 @@
 {
     "analysis_stage"   : "KratosMultiphysics.ConvectionDiffusionApplication.extended_gradient_method_convection_diffusion_analysis",
     "problem_data"     : {
-        "problem_name"  : "circunference_Conv_Diff",
+        "problem_name"  : "circunference_Conv_DIff_outer_BCs_quadrilateral",
         "parallel_type" : "OpenMP",
         "time_step"     : 1.0,
         "start_time"    : 0.0,
@@ -20,7 +20,7 @@
             "materials_filename" : "ConvectionDiffusionMaterials.json"
         },
         "line_search"                        : false,
-        "echo_level"                         : 1,
+        "echo_level"                         : 0,
         "compute_reactions"                  : false,
         "max_iteration"                      : 10,
         "convergence_criterion"              : "residual_criterion",
@@ -30,9 +30,6 @@
         "residual_absolute_tolerance"        : 1e-7,
         "time_stepping"                      : {
             "time_step" : 1.0
-        },
-        "element_replace_settings" : {
-                "element_name" : "LaplacianElement2D3N"
         }
     },
     "modelers"             : [{
@@ -47,7 +44,7 @@
         "modeler_name"             : "import_mdpa_modeler",
         "Parameters"               : {
             "model_part_name"          : "CartesianBackgroundMeshModelPart",
-            "input_filename"           : "background_mesh_22000_elem"
+            "input_filename"           : "circunference_Conv_DIff_outer_BCs_quadrilateral_9025_elem"
         }
     }
     ],
@@ -158,7 +155,7 @@
                     },
                     "point_data_configuration"  : []
                 },
-                "output_name"            : "gid_output/circonference_Conv_Diff"
+                "output_name"            : "gid_output/circunference_Conv_DIff_outer_BCs_quadrilateral"
             }
         }],
         "vtk_output" : [{
