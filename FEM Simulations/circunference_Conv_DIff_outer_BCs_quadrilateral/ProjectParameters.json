@@ -44,7 +44,7 @@
         "modeler_name"             : "import_mdpa_modeler",
         "Parameters"               : {
             "model_part_name"          : "CartesianBackgroundMeshModelPart",
-            "input_filename"           : "circunference_Conv_DIff_outer_BCs_quadrilateral_9025_elem"
+            "input_filename"           : "circunference_Conv_DIff_outer_BCs_quadrilateral_2500_elem"
         }
     }
     ],
@@ -120,6 +120,16 @@
             "python_module" : "compute_L2_norm_error_process",
             "kratos_module" : "KratosMultiphysics.ConvectionDiffusionApplication",
             "process_name"  : "ComputeL2NormErrorProcess",
+            "Parameters"    : {
+                "background_model_part_name"                 : "CartesianBackgroundMeshModelPart",
+                "analytical_solution"              : "np.sin(np.pi * x) * np.cos(np.pi * y)",
+                "unknown_variable_name"            : "TEMPERATURE"
+            }
+        }, 
+        {
+            "python_module" : "plot_numerical_solution_and_error_process",
+            "kratos_module" : "KratosMultiphysics.ConvectionDiffusionApplication",
+            "process_name"  : "PlotNumericalSolutionAndErrorProcess",
             "Parameters"    : {
                 "background_model_part_name"                 : "CartesianBackgroundMeshModelPart",
                 "analytical_solution"              : "np.sin(np.pi * x) * np.cos(np.pi * y)",

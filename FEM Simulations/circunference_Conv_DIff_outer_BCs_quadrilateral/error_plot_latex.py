@@ -10,32 +10,32 @@ plt.rcParams.update({
 })
 
 # Data points - RBF linear
-sizes_emb_RBF_lin = [0.0964, 0.0707, 0.0424, 0.0316, 0.028, 0.023, 0.022, 0.0202]
-errors_emb_RBF_lin = [0.00614, 0.0029, 0.00094, 0.00050, 0.000425, 0.00027, 0.000219, 0.000189]
+sizes_emb_RBF_lin = [0.0666, 0.05, 0.04, 0.033, 0.0286, 0.025, 0.02, 0.0125, 0.0105]
+errors_emb_RBF_lin = [0.0108, 0.0030, 0.00226, 0.00162, 0.0011, 0.000708, 0.000475, 0.00015, 0.00011]
 
 # Data points - RBF multiquadric
-sizes_emb_RBF_mult = [0.0964, 0.0707, 0.0424, 0.0316, 0.028, 0.023, 0.0202]
-errors_emb_RBF_mult = [0.0154, 0.00615, 0.0022, 0.00129, 0.00113, 0.00069, 0.00045]
+sizes_emb_RBF_invmult = [0.0666, 0.05, 0.04, 0.033, 0.0286, 0.025, 0.02, 0.0125, 0.0105]
+errors_emb_RBF_invmult = [0.00657, 0.00255, 0.00176, 0.00127, 0.00091, 0.0006, 0.000405, 0.000148, 0.000121]
 
-# Data for plotting (LINEAR TRIANGLE - MLS Order 2)
-sizes_emb_MLS_2 = [0.0964, 0.0707, 0.0424, 0.0316, 0.028, 0.023, 0.0202]
-errors_emb_MLS_2 = [0.0067, 0.00252, 0.00072, 0.000379, 0.000303, 0.000197, 0.000146]
+# Data for plotting (MLS Order 3)
+sizes_emb_MLS_3 = [0.0666, 0.05, 0.04, 0.033, 0.0286, 0.025, 0.02, 0.0125, 0.0105]
+errors_emb_MLS_3 = [0.0087, 0.0033, 0.00208, 0.00102, 0.000689, 0.00047, 0.00030, 0.00011, 7.852e-5]
 
-# Data for plotting (LINEAR TRIANGLE - MLS Order 3)
-sizes_emb_MLS_3 = [0.0964, 0.0707, 0.0424, 0.0316, 0.028, 0.023, 0.0202]
-errors_emb_MLS_3 = [0.00438, 0.00212, 0.00079, 0.000311, 0.000306, 0.00020, 0.000151]
+# Data for plotting (MLS Order 2)
+sizes_emb_MLS_2 = [0.0666, 0.05, 0.033, 0.0286, 0.025, 0.02, 0.0125, 0.0105]
+errors_emb_MLS_2 = [0.0087, 0.0033, 0.0025, 0.00137, 0.00062, 0.00039, 0.00011, 8.527e-5]
 
 
 # Slope-2 reference line
 x_slope2 = np.linspace(min(sizes_emb_RBF_lin), max(sizes_emb_RBF_lin), 100)
-y_slope2 = 4.0*errors_emb_RBF_lin[0] * (x_slope2 / sizes_emb_RBF_lin[0])**2 
+y_slope2 = 2.0*errors_emb_RBF_lin[0] * (x_slope2 / sizes_emb_RBF_lin[0])**2 
 
 # Create the plot
 plt.figure(figsize=(6, 4))
-plt.loglog(sizes_emb_RBF_lin, errors_emb_RBF_lin, 'b-v', label="RBF (linear) Gradient Interpolation")
-plt.loglog(sizes_emb_RBF_mult, errors_emb_RBF_mult, 'g-^', label="RBF (multiquadric) Gradient Interpolation")
-plt.loglog(sizes_emb_MLS_2, errors_emb_MLS_2, 'r-s', label="MLS (quadratic) Gradient Interpolation")
-plt.loglog(sizes_emb_MLS_3, errors_emb_MLS_3, 'c-p', label="MLS (cubic) Gradient Interpolation")
+plt.loglog(sizes_emb_RBF_lin, errors_emb_RBF_lin, 'g-s', label="RBF (linear) Gradient Interpolation")
+plt.loglog(sizes_emb_RBF_invmult, errors_emb_RBF_invmult, 'b-d', label="RBF (multiquadric) Gradient Interpolation")
+plt.loglog(sizes_emb_MLS_2, errors_emb_MLS_2, 'c-p', label="MLS (quadratic) Gradient Interpolation")
+plt.loglog(sizes_emb_MLS_3, errors_emb_MLS_3, 'r-v', label="MLS (cubic) Gradient Interpolation")
 plt.loglog(x_slope2, y_slope2, 'k--')
 
 # Add labels, grid, and legend
@@ -48,7 +48,7 @@ plt.legend(fontsize=14)
 # Add a small triangle to illustrate slope 2
 # Position the triangle above the slope line in log-log space
 triangle_x_start = 0.024  # Starting x position
-triangle_y_start = 0.0015 # Starting y position above the line
+triangle_y_start = 0.0027  # Starting y position above the line
 triangle_scale = 0.15  # Scale factor for triangle size
 
 # Calculate triangle vertices in log-log space
